@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Send a message to Team Byte.">
+  <title>Contact | Team Byte</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Team Byte</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <header class="page-header">
+      <h1>Contact us</h1>
+      <p class="lead">Questions, feedback or an idea for a project? Send us a message.</p>
+    </header>
+
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+        <p class="error" id="name-error"></p>
+</div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+        <p class="error" id="email-error"></p>
+      </div>
+
+      <div class="field">
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="general">General question</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="feedback">Feedback on our site</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required minlength="20" aria-describedby="message-hint message-error"></textarea>
+        <p class="hint" id="message-hint">At least 20 characters. You have typed <span id="char-count">0</span>.</p>
+        <p class="error" id="message-error"></p>
+      </div>
+
+      <button class="button" type="submit">Send message</button>
+      <p id="form-status" class="form-status" role="status"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Team Byte. Built for CSC 216.</p>
+    </div>
+  </footer>
+</body>
+</html>

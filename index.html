@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Team Byte: a CSC 216 web development pair.">
+  <title>Home | Team Byte</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Team Byte</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">CSC 216 · Lab 2</p>
+        <h1>We build small things for the web.</h1>
+        <p class="lead">We are two Computer Science students learning HTML, CSS and JavaScript, one page at a time.</p>
+        <a class="button" href="projects.html">See our projects</a>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="team-heading">
+      <h2 id="team-heading">Meet the team</h2>
+      <div class="team-grid">
+        <article class="card">
+          <div class="avatar" aria-hidden="true">AW</div>
+          <h3>Amina Wanjiru</h3>
+          <p class="role">Structure and design</p>
+          <p>Enjoys turning rough sketches into clean, accessible layouts.</p>
+        </article>
+        <article class="card">
+          <div class="avatar" aria-hidden="true">BO</div>
+          <h3>Brian Otieno</h3>
+          <p class="role">Logic and interaction</p>
+          <p>Came from C and likes making pages respond to people.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section" aria-labelledby="learning-heading">
+      <h2 id="learning-heading">What we are learning</h2>
+      <ul class="skill-list">
+        <li><strong>HTML</strong> gives a page its structure and meaning.</li>
+        <li><strong>CSS</strong> controls how that structure looks.</li>
+        <li><strong>JavaScript</strong> makes the page respond to the user.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Team Byte. Built for CSC 216.</p>
+    </div>
+  </footer>
+</body>
+</html>
