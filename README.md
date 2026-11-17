@@ -13,7 +13,8 @@
 - Part 1, 3: Samuel Mathenge
 
 ## Personalisation
-- Our colours:-  Light mode uses deep teal primary (`#0f6e6e`), dark teal hover (`#0a5050`), off-white background (`#f6f7f4`), pure white surfaces (`#ffffff`), and charcoal text (`#1c2430`). Dark mode uses bright cyan-teal primary (`#4fc1c1`), dark slate background (`#11161d`), dark surface cards (`#1a212b`), and light gray text (`#e7ebf0`).
+- Our colours:- Light mode uses deep indigo primary (`#4338ca`), dark indigo hover (`#312e81`), cool off-white background (`#f4f5f9`), white surfaces (`#ffffff`), and dark navy-charcoal text (`#181a24`). Dark mode uses soft periwinkle-indigo primary (`#818cf8`), deep midnight background (`#0f111a`), dark slate-indigo cards (`#181b28`), and soft white text (`#eef0f8`).
+
 
 - Projects we added:-  File Compression Algorithm, Operating System Process Scheduler, Peer-to-Peer File Sharing, Database Management System, Compiler for a Custom Language, Computer Network Traffic Analyzer, Pathfinding Algorithm Visualizer, Distributed Task Queue, Password Security Analyzer, Version Control System, Search Engine, and Digital Logic Circuit Simulator.
 

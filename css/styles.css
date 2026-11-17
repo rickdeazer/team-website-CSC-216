@@ -5,16 +5,16 @@
 
 /* ---------- 1. Design tokens ---------- */
 :root {
-  --color-bg: #f6f7f4;
+  --color-bg: #f4f5f9;
   --color-surface: #ffffff;
-  --color-text: #1c2430;
-  --color-muted: #5a6474;
-  --color-primary: #0f6e6e;
-  --color-primary-dark: #0a5050;
+  --color-text: #181a24;
+  --color-muted: #575c70;
+  --color-primary: #4338ca;
+  --color-primary-dark: #312e81;
   --color-on-primary: #ffffff;
-  --color-border: #dde1e6;
-  --color-error: #b3261e;
-  --color-success: #1e7b3a;
+  --color-border: #dce0ea;
+  --color-error: #c62828;
+  --color-success: #1b7a3d;
 
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-heading: Georgia, "Times New Roman", serif;
@@ -30,18 +30,19 @@
 }
 
 body.dark {
-  --color-bg: #11161d;
-  --color-surface: #1a212b;
-  --color-text: #e7ebf0;
-  --color-muted: #a2abb9;
-  --color-primary: #4fc1c1;
-  --color-primary-dark: #83d8d8;
-  --color-on-primary: #0b1f1f;
-  --color-border: #2b3340;
+  --color-bg: #0f111a;
+  --color-surface: #181b28;
+  --color-text: #eef0f8;
+  --color-muted: #9aa0b8;
+  --color-primary: #818cf8;
+  --color-primary-dark: #a5b4fc;
+  --color-on-primary: #111322;
+  --color-border: #2a2f45;
   --color-error: #ff8a80;
   --color-success: #7ddc97;
   color-scheme: dark;
 }
+
 
 
 
