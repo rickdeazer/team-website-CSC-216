@@ -137,12 +137,32 @@ const projectList = document.querySelector('#project-list');
 const projectCount = document.querySelector('#project-count');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
-function renderProjects(filter) {
-  const visible = filter === 'all'
-    ? projects
-    : projects.filter((project) => project.category === filter);
+const projectSearch = document.querySelector('#project-search');
+
+function renderProjects() {
+  const query = projectSearch
+    ? projectSearch.value.trim().toLowerCase()
+    : '';
+
+  const visible = projects.filter((project) => {
+    const matchesCategory =
+      currentFilter === 'all' ||
+      project.category === currentFilter;
+
+    const matchesSearch =
+      project.title.toLowerCase().includes(query);
+
+    return matchesCategory && matchesSearch;
+  });
 
   projectList.replaceChildren();
+
+  if (visible.length === 0) {
+    const message = document.createElement('p');
+    message.className = 'no-results';
+    message.textContent = 'No projects found. Try another search.';
+    projectList.append(message);
+  }
 
   visible.forEach((project) => {
     const card = document.createElement('article');
@@ -162,8 +182,34 @@ function renderProjects(filter) {
     projectList.append(card);
   });
 
-  projectCount.textContent = `Showing ${visible.length} of ${projects.length} projects`;
+  projectCount.textContent =
+    `Showing ${visible.length} of ${projects.length} projects`;
 }
+
+// Search as the visitor types
+if (projectSearch) {
+  projectSearch.addEventListener('input', renderProjects);
+}
+
+// Category filters
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    currentFilter = button.dataset.filter;
+
+    filterButtons.forEach((btn) => {
+      btn.setAttribute(
+        'aria-pressed',
+        String(btn === button)
+      );
+    });
+
+    renderProjects();
+  });
+});
+
+// Initial display
+renderProjects();
+
 
 if (projectList) {
   renderProjects('all');

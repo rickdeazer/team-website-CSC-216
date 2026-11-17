@@ -441,3 +441,38 @@ textarea[aria-invalid="true"] {
     transition: none !important;
   }
 }
+
+/* Project search */
+.project-search {
+  max-width: 520px;
+  margin: 0 auto 1.5rem;
+}
+
+.project-search label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.project-search input {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 10px;
+  background: var(--card-bg, #fff);
+  color: inherit;
+  font: inherit;
+  outline-offset: 3px;
+}
+
+.project-search input:focus {
+  border-color: var(--accent-color, #4776e6);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem 1rem;
+  opacity: 0.75;
+}
