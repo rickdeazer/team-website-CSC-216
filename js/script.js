@@ -55,14 +55,67 @@ if (themeToggle) {
 /* ---------- 2. Projects page ---------- */
 
 const projects = [
-  { title: 'Personal landing page', category: 'html', description: 'A single semantic HTML page with headings, lists and links.' },
-  { title: 'Responsive card grid', category: 'css', description: 'A layout that goes from one column on phones to three on laptops.' },
-  { title: 'Tip calculator', category: 'js', description: 'Reads two inputs and updates the total as you type.' },
-  { title: 'Accessible contact form', category: 'html', description: 'Labelled fields, helpful errors and keyboard-friendly controls.' },
-  { title: 'Dark mode toggle', category: 'js', description: 'Switches the colour theme and remembers the choice.' },
-  { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' }
+  {
+    title: 'File Compression Algorithm',
+    category: 'algorithms',
+    description: 'Build a compression tool using Huffman coding to reduce file sizes and reconstruct the original files.'
+  },
+  {
+    title: 'Operating System Process Scheduler',
+    category: 'systems',
+    description: 'Simulate CPU scheduling algorithms such as FCFS, SJF and Round Robin, comparing their performance.'
+  },
+  {
+    title: 'Peer-to-Peer File Sharing',
+    category: 'networking',
+    description: 'Build a decentralized file-sharing system where computers exchange files directly over a network.'
+  },
+  {
+    title: 'Database Management System',
+    category: 'databases',
+    description: 'Create a lightweight database engine that supports record storage, indexing, searching and basic queries.'
+  },
+  {
+    title: 'Compiler for a Custom Language',
+    category: 'languages',
+    description: 'Design a simple programming language with lexical analysis, parsing, syntax validation and execution.'
+  },
+  {
+    title: 'Computer Network Traffic Analyzer',
+    category: 'networking',
+    description: 'Capture and analyze network packets to understand protocols, communication patterns and traffic statistics.'
+  },
+  {
+    title: 'Pathfinding Algorithm Visualizer',
+    category: 'algorithms',
+    description: 'Implement Dijkstra and A* algorithms to find optimal paths through obstacles and visualize how they work.'
+  },
+  {
+    title: 'Distributed Task Queue',
+    category: 'systems',
+    description: 'Develop a system that distributes background tasks across multiple workers and handles failures.'
+  },
+  {
+    title: 'Password Security Analyzer',
+    category: 'cybersecurity',
+    description: 'Evaluate password strength using entropy calculations, pattern detection and common password analysis.'
+  },
+  {
+    title: 'Version Control System',
+    category: 'systems',
+    description: 'Build a simplified Git-like tool that tracks file changes, creates commits and supports version restoration.'
+  },
+  {
+    title: 'Search Engine',
+    category: 'algorithms',
+    description: 'Build a miniature search engine with document indexing, keyword retrieval and relevance ranking.'
+  },
+  {
+    title: 'Digital Logic Circuit Simulator',
+    category: 'hardware',
+    description: 'Simulate logic gates and interconnected digital circuits to evaluate Boolean expressions and circuit outputs.'
+  }
 ];
-
 const categoryNames = { html: 'HTML', css: 'CSS', js: 'JavaScript' };
 
 const projectList = document.querySelector('#project-list');

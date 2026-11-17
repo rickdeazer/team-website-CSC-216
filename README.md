@@ -1,6 +1,6 @@
 # Team Name: Lab 2 Website
 
-**Live site:** https://username.github.io/team-website/
+**Live site:**https://github.com/rickdeazer/team-website-CSC-216
 
 ## Team
 | Name | Registration no. | GitHub username |
