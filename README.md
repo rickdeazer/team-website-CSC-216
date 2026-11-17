@@ -1,6 +1,6 @@
 # Team Name: TEAM CONNECTYLE
 
-**Live site:**https://github.com/rickdeazer/team-website-CSC-216
+**Live site:**https://github.io/rickdeazer/team-website-CSC-216git
 
 ## Team
 | Name  | Registration no. | GitHub username |
