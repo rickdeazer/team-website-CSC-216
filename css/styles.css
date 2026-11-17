@@ -2,7 +2,7 @@
    Team website stylesheet (CSC 216, Lab 2)
    One file styles every page on the site.
    ===================================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&family=Elsie+Swash+Caps:wght@400;900&family=Emilys+Candy&family=Nosifer&family=Rubik+Moonrocks&family=Rubik+Puddles&family=Shadows+Into+Light&family=Special+Elite&family=Tapestry&display=swap');
 /* ---------- 1. Design tokens ---------- */
 :root {
   --color-bg: #f4f5f9;
@@ -10,6 +10,7 @@
   --color-text: #181a24;
   --color-muted: #575c70;
   --color-primary: #4338ca;
+  --glow-card: rgba(26, 69, 139, 0.597);
   --color-primary-dark: #312e81;
   --color-on-primary: #ffffff;
   --color-border: #dce0ea;
@@ -17,7 +18,7 @@
   --color-success: #1b7a3d;
 
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-heading: Georgia, "Times New Roman", serif;
+  --font-heading: Tapestry;
 
   --space-1: 0.5rem;
   --space-2: 1rem;
@@ -25,16 +26,17 @@
   --space-4: 2.5rem;
   --space-5: 4rem;
 
-  --radius: 10px;
+  --radius:10px;
   --max-width: 1080px;
 }
 
 body.dark {
   --color-bg: #0f111a;
-  --color-surface: #181b28;
+  --color-surface: #483936;
   --color-text: #eef0f8;
   --color-muted: #9aa0b8;
   --color-primary: #818cf8;
+  --glow-card:inset rgb(122, 112, 112);
   --color-primary-dark: #a5b4fc;
   --color-on-primary: #111322;
   --color-border: #2a2f45;
@@ -177,8 +179,9 @@ img {
 
 .logo {
   margin-right: auto;
-  font-family: var(--font-heading);
+  font-family: Rubik Puddles;
   font-size: 1.35rem;
+  text-shadow: 0 0 10px blue;
   font-weight: 700;
   color: var(--color-text);
   text-decoration: none;
@@ -250,9 +253,17 @@ img {
   padding: var(--space-3);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  background-color: var(--color-surface);
+  background: linear-gradient(95deg,transparent,var(--color-surface));
+  box-shadow: 3px 2px 5px var(--glow-card);
+  transform: perspective(280px) rotateY(5deg);
+  rotate: 10deg;
+  margin-bottom: 20px;
 }
-
+*{
+  font-family: Agrave Pro
+;
+  letter-spacing: 2px;
+}
 .avatar {
   display: grid;
   place-items: center;
@@ -264,8 +275,13 @@ img {
   color: var(--color-on-primary);
   font-size: 1.25rem;
   font-weight: 700;
+  animation: rotas 5s linear infinite;
 }
-
+@keyframes rotas {
+  0%{}  
+  50%{transform: rotate(60deg)}
+  100%{transform: rotate(-60deg);}
+}
 .role {
   color: var(--color-primary);
   font-weight: 600;
