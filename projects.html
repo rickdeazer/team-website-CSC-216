@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +18,10 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Genesis</a></li>
           <li><a href="projects.html" aria-current="page">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
         </ul>
       </nav>
       <button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
@@ -31,6 +33,16 @@
       <h1>Our projects</h1>
       <p class="lead">Small exercises we built while learning. Filter them by technology.</p>
     </header>
+
+    <!-- E3: Project search -->
+    <div class="project-search">
+      <label for="project-search">Search projects</label>
+      <input
+        type="search"
+        id="project-search"
+        placeholder="Type a project title..."
+      >
+    </div>
 
     <div class="filters" role="group" aria-label="Filter projects by technology">
       <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>

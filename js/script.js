@@ -22,24 +22,35 @@ if (navToggle && siteNav) {
     navToggle.setAttribute('aria-expanded', String(isOpen));
   });
 }
-
 // Dark mode, remembered across pages and visits.
 const themeToggle = document.querySelector('.theme-toggle');
 const THEME_KEY = 'team-theme';
 
 function applyTheme(theme) {
   const isDark = theme === 'dark';
+
   document.body.classList.toggle('dark', isDark);
+
   if (themeToggle) {
     themeToggle.setAttribute('aria-pressed', String(isDark));
   }
 }
 
-applyTheme(localStorage.getItem(THEME_KEY));
+// Use saved preference, or follow the operating system.
+const savedTheme = localStorage.getItem(THEME_KEY);
+
+const systemPrefersDark = window.matchMedia(
+  '(prefers-color-scheme: dark)'
+).matches;
+
+applyTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
-    const newTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+    const newTheme = document.body.classList.contains('dark')
+      ? 'light'
+      : 'dark';
+
     applyTheme(newTheme);
     localStorage.setItem(THEME_KEY, newTheme);
   });
@@ -47,9 +58,13 @@ if (themeToggle) {
 
 
 
+const searchInput = document.querySelector('#project-search');
 
+let currentFilter = 'all';
 
-
+if (searchInput) {
+  searchInput.addEventListener('input', renderProjects);
+}
 
 
 /* ---------- 2. Projects page ---------- */
